@@ -14,22 +14,81 @@
             <RowDefinition Height="23*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="74*"/>
+            <ColumnDefinition Width="43*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row ="0" Grid.Column="0" 
                     VerticalAlignment="Center"
-                    HorizontalAlignment="Left">
+                    HorizontalAlignment="Left" Margin="0,12,0,13" Height="80" Width="150">
             <Button Style="{DynamicResource btnStyle}" 
                     Content="Назад" Margin="20 20 20 20"
                     Height="40"
                     Width="110" Click="Button_Click"/>
         </StackPanel>
-
+        <StackPanel Grid.Row="1" 
+                    Grid.Column="0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    MinWidth ="150">
+            <TextBlock Text="Ввод"
+                       HorizontalAlignment="Center" 
+                       FontFamily="Arial" 
+                       FontSize="18"/>
+            <GroupBox Header="R0">
+                <TextBox Name="txtR0"/>
+            </GroupBox>
+            <GroupBox Header="R1">
+                <TextBox Name="txtR1"/>
+            </GroupBox>
+            <GroupBox Header="R2">
+                <TextBox Name="txtR2"/>
+            </GroupBox>
+            <GroupBox Header="R3">
+                <TextBox Name="txtR3"/>
+            </GroupBox>
+            <GroupBox Header="X">
+                <TextBox Name="txtX"/>
+            </GroupBox>
+        </StackPanel>
         <StackPanel VerticalAlignment="Center" 
                     Grid.Row="1"
                     HorizontalAlignment="Center"
-                    MinWidth="300">
-            <TextBox AcceptsReturn="True" Height="100"/>
+                    MinWidth="300" Grid.Column="1" Width="300">
+            
+            <TextBox Name="command" AcceptsReturn="True"
+                     TextWrapping="Wrap"
+                     Height="100" Margin=" 0 20"/>
+            <Button Style="{DynamicResource btnStyle}" 
+                    Content="Результат" IsDefault="True" 
+                    Click="Button_Click_1"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" 
+                    Grid.Column="2"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    MinWidth ="150">
+            <TextBlock Text="Вывод"
+                       HorizontalAlignment="Center" 
+                       FontFamily="Arial" 
+                       FontSize="18"/>
+            <ComboBox Name="systemaSch">
+                <ComboBoxItem Content="Двоичная"/>
+                <ComboBoxItem Content="Десятичная"/>
+                <ComboBoxItem Content="Шестнадцатеричная" IsSelected="True"/>
+            </ComboBox>
+            <GroupBox Header="R0">
+                <TextBox Name="vidR0" IsEnabled="False"/>
+            </GroupBox>
+            <GroupBox Header="R1">
+                <TextBox Name="vidR1" IsEnabled="False"/>
+            </GroupBox>
+            <GroupBox Header="R2">
+                <TextBox Name="vidR2" IsEnabled="False"/>
+            </GroupBox>
+            <GroupBox Header="R3">
+                <TextBox Name="vidR3" IsEnabled="False"/>
+            </GroupBox>
         </StackPanel>
     </Grid>
 </Page>
