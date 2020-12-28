@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ex"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Приложение" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <Frame x:Name="myFrame" NavigationUIVisibility="Hidden" Height="420"/>
+        </StackPanel>
     </Grid>
 </Window>

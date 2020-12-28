@@ -16,17 +16,23 @@ using System.Windows.Shapes;
 namespace Ex
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для AutoOrReg.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AutoOrReg : Page
     {
-        public MainWindow()
+        public AutoOrReg()
         {
             InitializeComponent();
-            BaseConnect.BaseModel = new Entities();
-            MyFrame.MyFrameLoad = myFrame;
-            MyFrame.MyFrameLoad.Navigate(new AutoOrReg());
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.MyFrameLoad.Navigate(new Auto());
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MyFrame.MyFrameLoad.Navigate(new Reg());
         }
     }
 }

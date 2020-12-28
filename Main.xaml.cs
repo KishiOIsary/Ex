@@ -16,17 +16,18 @@ using System.Windows.Shapes;
 namespace Ex
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Main.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Main : Page
     {
-        public MainWindow()
+        public Main()
         {
             InitializeComponent();
-            BaseConnect.BaseModel = new Entities();
-            MyFrame.MyFrameLoad = myFrame;
-            MyFrame.MyFrameLoad.Navigate(new AutoOrReg());
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.MyFrameLoad.GoBack();
         }
     }
 }
