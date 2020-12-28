@@ -9,7 +9,7 @@
       Title="AutoOrReg">
 
     <Grid>
-        <StackPanel>
+        <StackPanel VerticalAlignment="Center">
             <TextBlock Text=""/>
             <Button Style ="{DynamicResource btnStyle}" Content="Авторизация" Click="Button_Click" />
             <Button Style ="{DynamicResource btnStyle}" Content="Регистрация" Click="Button_Click_1"/>

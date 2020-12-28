@@ -72,7 +72,7 @@
                        HorizontalAlignment="Center" 
                        FontFamily="Arial" 
                        FontSize="18"/>
-            <ComboBox Name="systemaSch">
+            <ComboBox Name="systemaSch" >
                 <ComboBoxItem Content="Двоичная"/>
                 <ComboBoxItem Content="Десятичная"/>
                 <ComboBoxItem Content="Шестнадцатеричная" IsSelected="True"/>
