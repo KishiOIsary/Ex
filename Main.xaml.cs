@@ -149,8 +149,9 @@ namespace Ex
             }
             string str = command.Text;
             string[] str1 = str.Split(new char[] { ' ', ',','\n' });
-            str1[1].ToUpper();
-            str1[2].ToUpper();
+            str1[1] = str1[1].ToUpper();
+            str1[2] = str1[2].ToUpper();
+
             int r0 = Convert.ToInt32(txtR0.Text, 16);
             int r1 = Convert.ToInt32(txtR1.Text, 16);
             int r2 = Convert.ToInt32(txtR2.Text, 16);
