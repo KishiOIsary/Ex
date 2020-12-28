@@ -24,7 +24,6 @@ namespace Ex
         public Main()
         {
             InitializeComponent();
-            vidR0.Text = "2135";
             
         }
 
@@ -149,8 +148,9 @@ namespace Ex
             }
             string str = command.Text;
             string[] str1 = str.Split(new char[] { ' ', ',','\n' });
-            str1[1].ToUpper();
-            str1[2].ToUpper();
+            str1[1] = str1[1].ToUpper();
+            str1[2] = str1[2].ToUpper();
+
             int r0 = Convert.ToInt32(txtR0.Text, 16);
             int r1 = Convert.ToInt32(txtR1.Text, 16);
             int r2 = Convert.ToInt32(txtR2.Text, 16);
@@ -666,36 +666,36 @@ namespace Ex
                     MessageBox.Show("Некорректно введены команды!");
                     break;
             }
-            int cmb = systemaSch.SelectedIndex;
-            switch (cmb)
-            {
-                case 0:
-                    res0 = Convert.ToString(Convert.ToInt32(res0, 16), 2);
-                    res1 = Convert.ToString(Convert.ToInt32(res1, 16), 2);
-                    res2 = Convert.ToString(Convert.ToInt32(res2, 16), 2);
-                    res3 = Convert.ToString(Convert.ToInt32(res3, 16), 2);
-                    break;
-                case 1:
-                    res0 = Convert.ToString(Convert.ToInt32(res0, 16), 10);
-                    res1 = Convert.ToString(Convert.ToInt32(res1, 16), 10);
-                    res2 = Convert.ToString(Convert.ToInt32(res2, 16), 10);
-                    res3 = Convert.ToString(Convert.ToInt32(res3, 16), 10);
-                    break;
-                case 2:
-                    res0 = Convert.ToString(Convert.ToInt32(res0,16), 16);
-                    res1 = Convert.ToString(Convert.ToInt32(res1,16), 16);
-                    res2 = Convert.ToString(Convert.ToInt32(res2, 16), 16);
-                    res3 = Convert.ToString(Convert.ToInt32(res3, 16), 16);
-                    break;
-            }
+            //int cmb = systemaSch.SelectedIndex;
+            //switch (cmb)
+            //{
+            //    case 0:
+            //        res0 = Convert.ToString(Convert.ToInt32(res0, 16), 2);
+            //        res1 = Convert.ToString(Convert.ToInt32(res1, 16), 2);
+            //        res2 = Convert.ToString(Convert.ToInt32(res2, 16), 2);
+            //        res3 = Convert.ToString(Convert.ToInt32(res3, 16), 2);
+            //        break;
+            //    case 1:
+            //        res0 = Convert.ToString(Convert.ToInt32(res0, 16), 10);
+            //        res1 = Convert.ToString(Convert.ToInt32(res1, 16), 10);
+            //        res2 = Convert.ToString(Convert.ToInt32(res2, 16), 10);
+            //        res3 = Convert.ToString(Convert.ToInt32(res3, 16), 10);
+            //        break;
+            //    case 2:
+            //        res0 = Convert.ToString(Convert.ToInt32(res0,16), 16);
+            //        res1 = Convert.ToString(Convert.ToInt32(res1,16), 16);
+            //        res2 = Convert.ToString(Convert.ToInt32(res2, 16), 16);
+            //        res3 = Convert.ToString(Convert.ToInt32(res3, 16), 16);
+            //        break;
+            //}
             vidR0.Text = res0;
-            txtR0.Text = res0;
+            txtR0.Text = Convert.ToString(Convert.ToInt32(res0, 16), 16);
             vidR1.Text = res1;
-            txtR1.Text = res1;
+            txtR1.Text = Convert.ToString(Convert.ToInt32(res1, 16), 16);
             vidR2.Text = res2;
-            txtR2.Text = res2;
+            txtR2.Text = Convert.ToString(Convert.ToInt32(res2, 16), 16);
             vidR3.Text = res3;
-            txtR3.Text = res3;
+            txtR3.Text = Convert.ToString(Convert.ToInt32(res3, 16), 16);
         }
     }
 }

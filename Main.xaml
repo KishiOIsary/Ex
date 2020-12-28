@@ -36,29 +36,37 @@
                        FontFamily="Arial" 
                        FontSize="18"/>
             <GroupBox Header="R0">
-                <TextBox Name="txtR0"/>
+                <TextBox Name="txtR0" Text="a"/>
             </GroupBox>
             <GroupBox Header="R1">
-                <TextBox Name="txtR1"/>
+                <TextBox Name="txtR1" Text="b"/>
             </GroupBox>
             <GroupBox Header="R2">
-                <TextBox Name="txtR2"/>
+                <TextBox Name="txtR2" Text="c"/>
             </GroupBox>
             <GroupBox Header="R3">
-                <TextBox Name="txtR3"/>
+                <TextBox Name="txtR3" Text="d"/>
             </GroupBox>
             <GroupBox Header="X">
-                <TextBox Name="txtX"/>
+                <TextBox Name="txtX" Text="e"/>
             </GroupBox>
         </StackPanel>
         <StackPanel VerticalAlignment="Center" 
                     Grid.Row="1"
                     HorizontalAlignment="Center"
                     MinWidth="300" Grid.Column="1" Width="300">
-            
+            <TextBlock Text="Введите команды ассемблера"
+                       HorizontalAlignment="Center" 
+                       FontFamily="Arial" 
+                       FontSize="18"/>
+            <TextBlock Text="Например: add r0,r1" 
+                       HorizontalAlignment="Center" 
+                       FontFamily="Arial" 
+                       FontSize="18"/>
             <TextBox Name="command" AcceptsReturn="True"
                      TextWrapping="Wrap"
-                     Height="100" Margin=" 0 20"/>
+                     Height="100" Margin=" 0 20"
+                     FontSize="18"/>
             <Button Style="{DynamicResource btnStyle}" 
                     Content="Результат" IsDefault="True" 
                     Click="Button_Click_1"/>
